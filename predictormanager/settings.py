@@ -8,7 +8,7 @@ SECRET_KEY = '@7dedhv6ok+7-0s6m3r6#b4c@ghorn2bkc5m&n-cf!b@ef9yss'
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['mrcoolforecasts.herokuapp.com']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
