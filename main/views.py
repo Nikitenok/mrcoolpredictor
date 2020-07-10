@@ -3,7 +3,6 @@ from .models import Task
 from .forms import TaskForm
 from .applications.ui_predictor import Predictor
 
-
 def index(request):
 
     context = {

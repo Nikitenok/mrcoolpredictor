@@ -1,5 +1,6 @@
 import os
 import dj_database_url
+
 db_from_env = dj_database_url.config()
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -125,7 +126,8 @@ STATICFILES_LOCATION = 'static'
 STATIC_URL = '/static/'
 STATIC_ROOT = 'static'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'predictormanager/static')
+    os.path.join(BASE_DIR, 'predictormanager/static'),
+    '/var/www/static/',
 ]
 STATIC_DIRS = [
     os.path.join(BASE_DIR, 'predictormanager/static')
