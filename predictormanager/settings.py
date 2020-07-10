@@ -8,7 +8,7 @@ SECRET_KEY = '@7dedhv6ok+7-0s6m3r6#b4c@ghorn2bkc5m&n-cf!b@ef9yss'
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['mrcoolforecasts.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -127,4 +127,8 @@ STATIC_ROOT = 'static'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'predictormanager/static')
 ]
+STATIC_DIRS = [
+    os.path.join(BASE_DIR, 'predictormanager/static')
+]
+
 
