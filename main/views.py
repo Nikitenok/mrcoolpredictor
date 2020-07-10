@@ -29,5 +29,7 @@ def model(request):
         'title': 'Free Forecasts',
         'feedback': feedback
     }
-
-    return render(request, 'main/model.html', context)
+    try:
+        return render(request, 'main/model.html', context)
+    except Exception:
+        pass
