@@ -1,0 +1,26 @@
+{%  extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+
+{% block content %}
+    <h1 class="modal-title">Simple Arima Performance</h1>
+    {% load plotly_dash %}
+
+    <div class="{% plotly_class name='SimpleExample' %} card" style="height: 100%; width: 100%">
+    {% plotly_app name='SimpleExample' ratio=0.45 %}
+    </div>
+    <br><br>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-success" name="predict_">Update (30 sec)</button>
+        <br>
+        <span>{{feedback}}</span>
+    </form>
+    <br>
+
+
+{% endblock %}
