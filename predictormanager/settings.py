@@ -124,10 +124,9 @@ STATICFILES_FINDERS = [
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 STATICFILES_LOCATION = 'static'
 STATIC_URL = '/static/'
-STATIC_ROOT = 'static'
+STATIC_ROOT = "predictormanager/static/"
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'predictormanager/static'),
-    '/var/www/static/',
 ]
 STATIC_DIRS = [
     os.path.join(BASE_DIR, 'predictormanager/static')
