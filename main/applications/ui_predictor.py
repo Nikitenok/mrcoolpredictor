@@ -10,7 +10,7 @@ class Predictor:
         pass
 
     def predict(self):
-        #self.p.update_data()
+        self.p.update_data()
         self.ar.make_predictions()
     
     def get_preds(self):
