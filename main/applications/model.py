@@ -13,7 +13,7 @@ warnings.simplefilter("ignore")
 
 
 class Arima:
-    _def_syms = ['NOC', 'LUV', 'NI', 'SPGI', 'NTAP', 'EXR', 'AAPL']
+    _def_syms = ['NOC']
 
     def invboxcox(self, y, lbd):
         if lbd == 0:
