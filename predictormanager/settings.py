@@ -1,8 +1,6 @@
 import os
 import dj_database_url
 
-db_from_env = dj_database_url.config()
-
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 SECRET_KEY = '@7dedhv6ok+7-0s6m3r6#b4c@ghorn2bkc5m&n-cf!b@ef9yss'
@@ -63,7 +61,7 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
+db_from_env = dj_database_url.config()
 DATABASES['default'].update(db_from_env)
 
 PLOTLY_COMPONENTS = [
