@@ -38,21 +38,25 @@ class Arima:
             results = []
             best_aic = float("inf")
             warnings.filterwarnings('ignore')
+            best_param = []
 
-            for param in parameters_list:
-                try:
-                    model = sm.tsa.statespace.SARIMAX(X[i].close_1, order=(param[0], d, param[1]),
-                                                      seasonal_order=(param[2], D, param[3], 12)).fit(disp=-1)
-                except ValueError:
-                    continue
-                aic = model.aic
-
-                if aic < best_aic:
-                    best_model = model
-                    best_aic = aic
-                    best_param = param
-                results.append([param, model.aic])
-
+            #for param in parameters_list:
+            #    try:
+            #        model = sm.tsa.statespace.SARIMAX(X[i].close_1, order=(param[0], d, param[1]),
+            #                                          seasonal_order=(param[2], D, param[3], 12)).fit(disp=-1)
+            #    except ValueError:
+            #        continue
+            #    aic = model.aic
+            #
+            #    if aic < best_aic:
+            #        best_model = model
+            #        best_aic = aic
+            #        best_param = param
+            #    results.append([param, model.aic])
+#
+            #print(best_param)
+            best_model = sm.tsa.statespace.SARIMAX(X[i].close_1, order=(0, d, 0),
+                                              seasonal_order=(0, D, 1, 12)).fit(disp=-1)
             X[i]['model'] = self.invboxcox(best_model.fittedvalues, lmbda)
 
             last_month = (X[i].tail(1).index)[0]
