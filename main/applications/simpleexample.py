@@ -16,11 +16,13 @@ app = DjangoDash('SimpleExample', external_stylesheets=external_stylesheets)
 m = Arima()
 
 data = m.get_preds()
-syms = list(data.keys())
 
-date_list = [ datetime.datetime(2010, 1, 1)
-                         + relativedelta(months=i) for i in range(1, 12*11)]
 if len(data) != 0:
+
+    syms = list(data.keys())
+
+    date_list = [datetime.datetime(2010, 1, 1)
+                 + relativedelta(months=i) for i in range(1, 12 * 11)]
     print("11")
     app.layout = html.Div([
         html.H2(id='output-symbol'),
