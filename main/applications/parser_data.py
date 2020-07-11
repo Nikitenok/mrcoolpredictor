@@ -5,7 +5,7 @@ import sqlite3
 
 class Parser:
     
-    symbols = ('NOC')
+    symbols = ('NOC', )
     period='10y'
     interval = "1mo"
 

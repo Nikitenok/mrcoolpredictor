@@ -18,11 +18,7 @@ def model(request):
 
     if request.method == 'POST':
         if 'predict_' in request.POST:
-            try:
-                predictor.predict()
-                feedback = "Success"
-            except:
-                feedback = "Prediction failed"
+            predictor.predict()
 
     context = {
         'title': 'Free Forecasts',
