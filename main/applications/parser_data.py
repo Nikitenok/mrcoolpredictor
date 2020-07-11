@@ -38,6 +38,7 @@ class Parser:
             data = pdr.get_data_yahoo(i, period=period,interval = interval)        
             data = data.drop(drop_cols, axis=1)
             data = data.dropna()
+            print(i)
             data = data.Close.resample('MS').mean().to_frame()
 
 
