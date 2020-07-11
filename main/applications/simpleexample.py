@@ -21,7 +21,7 @@ syms = list(data.keys())
 date_list = [ datetime.datetime(2010, 1, 1)
                          + relativedelta(months=i) for i in range(1, 12*11)]
 if len(data) != 0:
-    print("1")
+    print("11")
     app.layout = html.Div([
         html.H2(id='output-symbol'),
         dcc.RadioItems(
@@ -80,5 +80,5 @@ if len(data) != 0:
         )
         return {'data': [graph, graph_f], 'layout': layout}
 else:
-    print("2")
+    print("22")
     app.layout = html.Div([])
