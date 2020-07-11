@@ -126,10 +126,12 @@ STATICFILES_LOCATION = 'static'
 STATIC_URL = '/static/'
 STATIC_ROOT = "predictormanager/static/"
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'predictormanager/static'),
+    os.path.join(BASE_DIR, 'static'),
+    '/projects/predictormanager/predictormanager/static/',
 ]
 STATIC_DIRS = [
-    os.path.join(BASE_DIR, 'predictormanager/static')
+    os.path.join(BASE_DIR, 'static'),
+    '/projects/predictormanager/predictormanager/static/',
 ]
 
 
