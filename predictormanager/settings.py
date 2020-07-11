@@ -34,6 +34,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'predictormanager.urls'
@@ -124,14 +125,14 @@ STATICFILES_FINDERS = [
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 STATICFILES_LOCATION = 'static'
 STATIC_URL = '/static/'
-STATIC_ROOT = "predictormanager/static/"
+
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
-    '/projects/predictormanager/predictormanager/static/',
-]
-STATIC_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
-    '/projects/predictormanager/predictormanager/static/',
 ]
 
+STATIC_ROOT = os.path.join(BASE_DIR, "live-static", "static-root")
+
+MEDIA_URL = "/media/"
+
+MEDIA_ROOT = os.path.join(BASE_DIR, "live-static", "media-root")
 
