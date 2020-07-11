@@ -113,12 +113,9 @@ class Arima:
         return new_dict
 
     def make_predictions(self):
-        try:
-            x = self.get_data(self._syms)
-            self.pred_dict = self.arima(x, self._syms)
-            print("got a forecast")
-        except Exception:
-            print('data is not found')
+        x = self.get_data(self._syms)
+        print("3")
+        self.pred_dict = self.arima(x, self._syms)
 
     #####################################################################
 
