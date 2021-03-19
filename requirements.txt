@@ -23,7 +23,7 @@ dash-table==4.8.1
 data==0.4
 decorator==4.4.2
 dj-config-url==0.1.1
-Django==3.0.8
+Django==3.1.6
 django-plotly-dash==1.4.2
 django-redis==4.12.1
 dpd-components==0.1.0
